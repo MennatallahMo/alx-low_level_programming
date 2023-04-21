@@ -1,9 +1,11 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
+/**
+ * main - Entry Point
+ * 
+ * Description : A c program to run grater than and less than numbers using if and if else 
+ */
 int main(void)
 {
 	int n;
