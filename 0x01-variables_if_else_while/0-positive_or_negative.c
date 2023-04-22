@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * main : A c program using if and if else.
+ * main - A c program using if and if else.
  *
  * Description : getting numbers > or <
  *
