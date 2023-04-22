@@ -1,17 +1,15 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/* more headers goes there */
 /**
  * main : A c program using if and if else.
  *
  * Description : getting numbers > or <
  *
- * if else if:(positive or negative)
+ * if_else_if : positive or negative
  *
  * Return: 0 (sucess)
  */
-/* betty style doc for function main goes there */
 int main(void)
 {
 	int n;
