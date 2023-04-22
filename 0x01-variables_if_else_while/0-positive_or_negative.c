@@ -7,6 +7,8 @@
  *
  * Description : getting numbers > or <
  *
+ * if else if:(positive or negative)
+ *
  * Return: 0 (sucess)
  */
 /* betty style doc for function main goes there */
