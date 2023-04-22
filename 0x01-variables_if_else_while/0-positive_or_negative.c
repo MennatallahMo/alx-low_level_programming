@@ -7,11 +7,12 @@
  *
  * Description : getting numbers > or <
  *
- * Return : 0 
+ * Return: 0 (sucess) 
  */
 int main(void)
 {
 	int n;
+
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	if (n > 0)
