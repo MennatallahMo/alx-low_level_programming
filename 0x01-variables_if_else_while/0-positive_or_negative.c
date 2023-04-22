@@ -1,14 +1,14 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-
 /**
  * main : A c program using if and if else.
  *
  * Description : getting numbers > or <
  *
- * Return: 0 (sucess) 
+ * Return: 0 (sucess)
  */
+/* betty style doc for function main goes there */
 int main(void)
 {
 	int n;
