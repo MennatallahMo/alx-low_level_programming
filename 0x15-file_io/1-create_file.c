@@ -17,7 +17,7 @@ int _strlen(char *s)
 }
 
 /**
- * create_files - Create a function that creates a file.
+ * create_file - Create a function that creates a file.
  * @filename: filename
  * @text_content: text written
  * Return: 1 on success, -1 on failure
