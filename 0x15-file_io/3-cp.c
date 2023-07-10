@@ -7,28 +7,37 @@
 #define PERMISSIONS (S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH)
 
 /**
- * main - check
- * @av: argument vector
- * @ac: argument count
+ * main - copying file program
+ * @av: vector
+ * @ac: count
  * Return: 1 success , 0 failure
  */
 int main(int ac, char **av)
 {
 	char buffer[READ_BUFFER_SIZE];
 	ssize_t byte;
-	int from_i = 0, to _i = 0;
+	int from_i = 0, to_i = 0;
 
 	if (ac != 3)
-		dprint(STDERR_FILENO, USAGE), exit(97);
+		dprintf(STDERR_FILENO, USAGE), exit(97);
 	from_i = open(av[1], O_RDONLY);
 	if (from_i == -1)
 		dprintf(STDERR_FILENO, ERR_NOREAD, av[1]), exit(98);
 	to_i = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, PERMISSIONS);
 	if (to_i == -1)
-		dprint(STDERR_FILENO, ERR_NOWRITE, av[2]), exit(99);
+		dprintf(STDERR_FILENO, ERR_NOWRITE, av[2]), exit(99);
 	while ((byte = read(from_i, buffer, READ_BUFFER_SIZE)) > 0)
-		if (write(to_i, buffer, byte) !=byte)
+		if (write(to_i, buffer, byte) != byte)
 			dprintf(STDERR_FILENO, ERR_NOWRITE, av[2]), exit(99);
 	if (byte == -1)
 		dprintf(STDERR_FILENO, ERR_NOREAD, av[1]), exit(98);
 
+	from_i = close(from_i);
+	to_i = close(to_i);
+	if (from_i)
+		dprintf(STDERR_FILENO, ERR_NOCLOSE, from_i), exit(100);
+	if (to_i)
+		dprintf(STDERR_FILENO, ERR_NOCLOSE, from_i), exit(100);
+
+	return (EXIT_SUCCESS);
+}
