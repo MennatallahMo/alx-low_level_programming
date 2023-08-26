@@ -1,0 +1,9 @@
+#include "main.h"
+/**
+ * atoi - .......
+ * @s: ....
+ * Return: .....
+ */
+int _atoi(char *s)
+{
+}
